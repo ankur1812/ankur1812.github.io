@@ -1,0 +1,193 @@
+/* Import Google Fonts for Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Main body styling */
+body {
+    padding: 10%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Updated font-family */
+    background-color: #0F172C; /* Dark theme background */
+    color: #f0f0f0; /* Light text color for contrast */
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    width: 22%;
+    padding: 1%;
+    color: #f0f0f0; /* Light text color in sidebar */
+    box-shadow: none; /* Removed box shadow */
+    background: none; /* No background color */
+    height: 100vh; /* Full viewport height */
+    overflow-y: auto; /* Scroll if content overflows */
+}
+
+/* Main Panel */
+.main-panel {
+    margin-left: 30%;
+    width: 68%;
+    padding: 1%;
+    /* background: #121212; */
+    color: #f0f0f0; /* Light text color in main panel */
+}
+.main-panel {
+    margin-left: 30%;
+    width: 68%;
+    padding: 1%;
+    color: #f0f0f0; /* Light text color in main panel */
+    position: relative; /* For pseudo-element positioning */
+    overflow: hidden; /* Hide overflow to keep fade effect clean */
+}
+
+/* Fade-out Effect */
+.main-panel::before {
+    content: "";
+    position: fixed;
+    height: 200px;
+    width: 100%;
+    top: -80px;
+    z-index: 999;
+    background: linear-gradient(to bottom, 
+        rgba(31, 31, 31, 0) 0%,
+        rgba(31, 31, 31, 0.75) 25%,
+        rgba(31, 31, 31, 0.50) 50%,
+        rgba(31, 31, 31, 0.25) 75%,
+        rgba(31, 31, 31, 0) 100%
+    );
+    pointer-events: none; /* Ensures it doesn't interfere with content interactions */
+}
+.main-panel::after {
+    content: "";
+    position: fixed;
+    height: 150px;
+    width: 100%;
+    bottom: -40px;
+    z-index: 999;
+    background: linear-gradient(to top, 
+        rgba(31, 31, 31, 1) 0%,
+        rgba(31, 31, 31, 0.25) 25%,
+        rgba(31, 31, 31, 0.50) 50%,
+        rgba(31, 31, 31, 0.25) 75%,
+        rgba(31, 31, 31, 0) 100%
+    );
+    pointer-events: none; /* Ensures it doesn't interfere with content interactions */
+}
+/* Tabs Navigation */
+.tabs-navigation {
+    margin-top: 16px;
+}
+
+.tab-link {
+    display: block;
+    padding: 10px;
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 18px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    transition: color 0.3s;
+}
+
+.tab-link.active {
+    color: white; /* Blue color for active tabs */
+    font-weight: bold;
+}
+
+.tab-link:hover {
+    color: white; /* Blue color on hover */
+}
+
+/* Section Headers */
+h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+/* Game Item */
+.game-item {
+    width: 240px;
+    height: 240px;
+    display: inline-block;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.game-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.game-item:hover {
+    transform: scale(1.05); /* Slightly scale on hover */
+}
+
+/* Project Item */
+.project-item {
+    margin-bottom: 24px;
+}
+
+/* Experience Item */
+.experience-item {
+    margin-bottom: 24px;
+}
+
+/* Skills Chips */
+.chip {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: #333;
+    color: #f0f0f0;
+    border-radius: 16px;
+    font-size: 14px;
+}
+
+/* Scroll animations */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Scroll Detection */
+section {
+    position: relative;
+    padding-bottom: 100px; /* Ensures sections don't hide behind fixed header */
+}
+section h2 {
+    margin-top: 0px;
+    font-size: 28px;
+    margin-bottom: 68px;
+}
+section .experience-item h3 {
+    margin-top: 54px;
+}
+
+/* Header Styling */
+header {
+    background: #007bff; /* Updated header background color */
+    color: #f0f0f0; /* Light text color in header */
+    padding: 16px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.company-details {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.company-logo {
+    height: 20px; /* Adjusted logo height */
+}
+
+.company-details {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
