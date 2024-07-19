@@ -75,12 +75,12 @@ body {
 }
 /* Tabs Navigation */
 .tabs-navigation {
-    margin-top: 16px;
+    margin-top: 48px;
 }
 
 .tab-link {
     display: block;
-    padding: 10px;
+    padding: 10px 0;
     color: #f0f0f0;
     text-decoration: none;
     font-size: 18px;
@@ -92,6 +92,9 @@ body {
 .tab-link.active {
     color: white; /* Blue color for active tabs */
     font-weight: bold;
+}
+.tab-link.active::before {
+    content: '→ ';
 }
 
 .tab-link:hover {
@@ -141,12 +144,57 @@ h2 {
     display: inline-block;
     padding: 5px 10px;
     margin: 5px;
-    background-color: #333;
+    background-color: #21102e;
+    cursor: pointer;
     color: #f0f0f0;
     border-radius: 16px;
     font-size: 14px;
 }
+.chip:hover {
+    color: white;
+    transition: color .5s;
+    box-shadow: #0F172C;
+    /* transition-duration: 1s; */
+}
 
+.hobby-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 22px;
+    padding: 12px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid transparent;
+}
+.hobby-item:hover {
+    border-color: white;
+    transition: border-color 0.5s;
+}
+.hobby-item:hover .arrow {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+.hobby-item .arrow {
+    opacity: 0;
+}
+.hobby-item p {
+    margin: 0;
+}
+
+.hobby-header {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.hobby-header img {
+    height: 32px;
+    width: 32px;
+}
+.hobby-header h3 {
+    margin: 0px;
+}
 /* Scroll animations */
 html {
     scroll-behavior: smooth;
@@ -186,8 +234,27 @@ header h1 {
     height: 20px; /* Adjusted logo height */
 }
 
+.date {
+    color: lightgray;
+    font-size: 12.5px;
+    margin-left: 12px;
+}
+.date::before {
+    content: ' | '
+}
+
 .company-details {
     display: flex;
     align-items: center;
     gap: 8px;
+}
+
+img {
+    border-radius: 12px;
+}
+
+img.logo {
+    height: 17px;
+    aspect-ratio: 1;
+    border-radius: 2px;
 }
