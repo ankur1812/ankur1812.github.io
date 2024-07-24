@@ -7,8 +7,9 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif; /* Updated font-family */
     background-color: #0F172C; /* Dark theme background */
-    color: #f0f0f0; /* Light text color for contrast */
+    color: #94a3b8; /* Light text color for contrast */
     scroll-behavior: smooth; /* Smooth scrolling */
+    cursor: default;
 }
 
 /* Sidebar */
@@ -16,7 +17,7 @@ body {
     position: fixed;
     width: 22%;
     padding: 1%;
-    color: #f0f0f0; /* Light text color in sidebar */
+    color: inherit; /* Light text color in sidebar */
     box-shadow: none; /* Removed box shadow */
     background: none; /* No background color */
     height: 100vh; /* Full viewport height */
@@ -29,13 +30,13 @@ body {
     width: 68%;
     padding: 1%;
     /* background: #121212; */
-    color: #f0f0f0; /* Light text color in main panel */
+    color: inherit; /* Light text color in main panel */
 }
 .main-panel {
     margin-left: 30%;
     width: 68%;
     padding: 1%;
-    color: #f0f0f0; /* Light text color in main panel */
+    color: inherit; /* Light text color in main panel */
     position: relative; /* For pseudo-element positioning */
     overflow: hidden; /* Hide overflow to keep fade effect clean */
 }
@@ -81,24 +82,30 @@ body {
 .tab-link {
     display: block;
     padding: 10px 0;
-    color: #f0f0f0;
+    color: inherit;
     text-decoration: none;
     font-size: 18px;
     margin-bottom: 8px;
     border-radius: 4px;
+    opacity: 0.75;
     transition: color 0.3s;
 }
 
-.tab-link.active {
-    color: white; /* Blue color for active tabs */
-    font-weight: bold;
-}
-.tab-link.active::before {
-    content: '→ ';
+.tab-link.active, .tab-link:hover {
+    opacity: 1;
+    color: #e2e8f0; /* Blue color for active tabs */
 }
 
-.tab-link:hover {
-    color: white; /* Blue color on hover */
+.tab-link::before {
+    min-width: 0px;
+    transform: scaleX(0)
+}
+.tab-link.active::before, .tab-link:hover::before {
+    content: '→ ';
+    transform: scale(1.5);
+    width: 120px;
+    /* transition: transform 3s; */
+    
 }
 
 /* Section Headers */
@@ -146,7 +153,7 @@ h2 {
     margin: 5px;
     background-color: #21102e;
     cursor: pointer;
-    color: #f0f0f0;
+    color: inherit;
     border-radius: 16px;
     font-size: 14px;
 }
@@ -221,8 +228,16 @@ header {
     padding: 16px;
 }
 
-header h1 {
+header {
     margin: 0;
+}
+
+h1, h2, h3 {
+    color: #e2e8f0;
+    /* color: lightblue; */
+    /* color: lightcyan; */
+    opacity: 0.95;
+    /* color: #ceead4; */
 }
 
 .company-details {
@@ -235,7 +250,8 @@ header h1 {
 }
 
 .date {
-    color: lightgray;
+    /* color: lightgray; */
+    opacity: 0.65;
     font-size: 12.5px;
     margin-left: 12px;
 }
