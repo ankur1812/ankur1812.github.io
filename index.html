@@ -20,18 +20,48 @@
     <div class="container">
         <div class="sidebar">
             <div class="profile">
-                <img src="./assets/me.png" height="120" alt="Profile Picture" style="aspect-ratio: 1; object-fit: cover;">
+                <img src="./assets/me.png" class="m-l-6" height="120" alt="Profile Picture" style="aspect-ratio: 1; object-fit: cover;">
                 <h1>Ankur Anmol</h1>
-                <p>I'm a SW Developer with interest in front-end technologies.
+                <!-- <p>I'm a SW Developer with interest in front-end technologies. -->
+                <p> JavaScript / Front End Developer
                 </p>
             </div>
             <nav class="tabs-navigation">
-                <a href="#work-experience" class="tab-link active">Professional Experience</a>
+                <a href="#about" class="tab-link active">About me</a>
+                <a href="#work-experience" class="tab-link">Professional Experience</a>
                 <a href="#hobby-projects" class="tab-link">Hobby Projects</a>
-                <a href="#my-games" class="tab-link">My Games</a>
+                <!-- <a href="#my-games" class="tab-link">My Games</a> -->
             </nav>
         </div>
         <div class="main-panel">
+            <section id="about">
+                <h2>About me</h2>
+                <p>
+
+                    I am a Software Developer with over 7+ years of experience in the IT industry, specializing in both frontend and full-stack
+                    technologies. I have a robust background in JavaScript and the software development process
+                    along with a good experience in modern frameworks / libraries such as Angular, React, and Vue.js.
+
+                    <br/>
+                    <br/>
+                    I also have an interest in academics, so I took a break from my career in 2020 and started my Masters in Computer Science at Vrije University Amsterdam.
+                    My university projects were a bit different from the IT industry but still highly technical and focusing on best approaches on problem solving. 
+                    
+                    Some of these projects included high level software architecture and service oriented designs, semantic web platforms, profiling android apps, creating data-centers network topologies (SDNs) using Mininet,
+                    Web services deployment using Kubernetes, and building an educational game for kids in Sarawak (Malaysia).
+                    
+                    <br/>
+                    <br/>
+                    
+                    In my free time, I have worked on a few personal projects, which included developing React Native apps, chrome extensions, and NPM packages, and some games built in C++ / JavaScript and Unity.
+                    <!-- This blend of academic, professional, and personal experiences underscores [Your Name]'s commitment to advancing their skills and contributing to the tech community. -->
+                    <br/>
+                    <br/>
+
+
+
+                </p>
+            </section>
             <section id="work-experience">
                 <h2>Professional Experience</h2>
                 <div class="experience-item">
@@ -178,7 +208,23 @@
                     <p>A CLI tool for building chrome extensions.</p>
                 </a>
 
-                <!-- <div class="project-item">
+                <div class="hobby-item">
+                    <div class="hobby-header">
+                        <img src="./assets/neo-player.png">
+                        <h3>
+                            Neo Player
+                            <span class="arrow"> &rarr; </span>
+                        </h3>
+                    </div>
+                    <p>A webview based app designed for YouTube with improved UX. The App is not live yet but here's the Walkthrough video of it: 
+                        <a href="https://www.youtube.com/shorts/xI8KlCDrvu8" target="_blank">
+                        Neo Player | Demo
+                    </p>
+                </div>
+
+                
+                <!-- 
+                <div class="project-item">
                     <h3>EduLajar: Language Learning App</h3>
                     <p>I have worked on developing an Android game for helping children in rural Malaysia read and write in Malay, for my (team) project use-case for the course ICT4D in the Field (in my Masters). The app was built in Unity and can be downloaded <a href="https://example.com/edulajar">here</a>.</p>
                 </div>
@@ -195,7 +241,8 @@
                     <p>I’ve built a few 2D and 3D games on C++ and Unity. (Unity 3D itself is a full-fledged game development engine, and for C++, Allegro is a graphics library which can install graphics to the console allowing it to code and design games).</p>
                 </div> -->
             </section>
-            <section id="my-games">
+
+            <section id="my-games" style="display: none">
                 <h2>My Games</h2>
                 <div class="game-item">
                     <h3>Snake</h3>

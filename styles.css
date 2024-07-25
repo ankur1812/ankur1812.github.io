@@ -7,7 +7,9 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif; /* Updated font-family */
     background-color: #0F172C; /* Dark theme background */
-    color: #94a3b8; /* Light text color for contrast */
+    /* Light text color for contrast */
+    /* color: #94a3b8; */
+    color: #e2e8f0; 
     scroll-behavior: smooth; /* Smooth scrolling */
     cursor: default;
 }
@@ -210,12 +212,18 @@ html {
 /* Scroll Detection */
 section {
     position: relative;
-    padding-bottom: 100px; /* Ensures sections don't hide behind fixed header */
+    padding-bottom: 70px; /* Ensures sections don't hide behind fixed header */
 }
 section h2 {
     margin-top: 0px;
     font-size: 28px;
     margin-bottom: 68px;
+
+    /* Without profile pic */
+    /* margin-top: 20px;
+    margin-bottom: 48px; */
+
+
 }
 section .experience-item h3 {
     margin-top: 54px;
@@ -273,4 +281,8 @@ img.logo {
     height: 17px;
     aspect-ratio: 1;
     border-radius: 2px;
+}
+
+.m-l-6 {
+    margin-left: 24px;
 }
