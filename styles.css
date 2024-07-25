@@ -19,6 +19,7 @@ body {
     position: fixed;
     width: 22%;
     padding: 1%;
+    padding-top: 3.5rem;
     color: inherit; /* Light text color in sidebar */
     box-shadow: none; /* Removed box shadow */
     background: none; /* No background color */
@@ -145,7 +146,10 @@ h2 {
 
 /* Experience Item */
 .experience-item {
-    margin-bottom: 24px;
+    padding-bottom: 2rem;
+    /* margin-bottom: 16px; */
+    border-bottom: 1px solid #e2e8f0;
+
 }
 
 /* Skills Chips */
@@ -176,6 +180,7 @@ h2 {
     text-decoration: none;
     color: inherit;
     border: 1px solid transparent;
+    /* border-bottom: 1px solid #e2e8f0; */
 }
 .hobby-item:hover {
     border-color: white;
@@ -212,16 +217,17 @@ html {
 /* Scroll Detection */
 section {
     position: relative;
-    padding-bottom: 70px; /* Ensures sections don't hide behind fixed header */
+    padding-bottom: 26px; /* Ensures sections don't hide behind fixed header */
 }
 section h2 {
     margin-top: 0px;
     font-size: 28px;
     margin-bottom: 68px;
+    margin-bottom: 48px;
 
     /* Without profile pic */
-    /* margin-top: 20px;
-    margin-bottom: 48px; */
+    margin-top: 20px;
+    /* margin-bottom: 48px; */
 
 
 }
@@ -229,6 +235,9 @@ section .experience-item h3 {
     margin-top: 54px;
 }
 
+section#hobby-projects {
+    margin-top: 2rem;
+}
 /* Header Styling */
 header {
     background: #007bff; /* Updated header background color */
@@ -285,4 +294,12 @@ img.logo {
 
 .m-l-6 {
     margin-left: 24px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+a:not(.hobby-item):hover {
+    text-decoration: underline;
 }
