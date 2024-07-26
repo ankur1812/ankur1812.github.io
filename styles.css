@@ -293,7 +293,7 @@ a {
     text-decoration: none;
     color: white;
 }
-a:not(.hobby-item):hover {
+a:not(.hobby-item, .tab-link):hover {
     text-decoration: underline;
 }
 
