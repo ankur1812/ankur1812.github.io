@@ -32,13 +32,6 @@ body {
     margin-left: 30%;
     width: 68%;
     padding: 1%;
-    /* background: #121212; */
-    color: inherit; /* Light text color in main panel */
-}
-.main-panel {
-    margin-left: 30%;
-    width: 68%;
-    padding: 1%;
     color: inherit; /* Light text color in main panel */
     position: relative; /* For pseudo-element positioning */
     overflow: hidden; /* Hide overflow to keep fade effect clean */
@@ -303,3 +296,64 @@ a {
 a:not(.hobby-item):hover {
     text-decoration: underline;
 }
+
+@media only screen and (max-width: 728px) {
+    body { padding: 6%; }
+    .sidebar {
+        position: relative;
+        height: auto;
+        width: 90dvw;
+        padding-top: 0.5rem;
+
+        position: sticky;
+        top: 0px;
+        display: flex;
+        /* gap: 1rem; */
+        justify-content: space-between;
+        align-items: flex-start;
+        z-index: 99999999;
+        background-color: inherit;
+        border-bottom: 1px solid #e2e8f0;
+        box-shadow: 0px 40px 80px rgba(0, 0, 0, 0.2);
+    }
+
+    .profile h1 {
+        font-size: 1.25rem;
+        margin: 4px 0;
+    }
+    .profile p {
+        font-size: 0.85rem;
+        margin: 0;
+    }
+
+    .main-panel {
+        margin: 0%;
+        padding: 10%;
+        width: 80%;
+    }
+    /* .main-panel::before {
+        height: 20px;
+        width: 100%; 
+    } */
+    .tabs-navigation {
+        display: flex;
+        gap: 8px;
+        position: sticky;
+        top: 0px;
+        margin-top: 8px;
+    }
+    .tab-link.active::before, .tab-link:hover::before {
+        content: '';
+    }
+    .tab-link.active, .tab-link:hover {
+        content: '';
+    }
+    
+    .tabs-navigation a{
+        font-size: 14px;
+    }
+    section {
+        padding-top: 4.4rem;
+        padding-bottom: 0px;
+    }
+  }
