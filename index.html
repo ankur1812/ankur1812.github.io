@@ -17,6 +17,7 @@
     </style>
 </head>
 <body>
+    <canvas id="animation-canvas"></canvas>
     <!-- <div class="container"> -->
         <div class="sidebar">
             <div class="profile">
@@ -248,11 +249,11 @@
                 <h2>My Games</h2>
                 <div class="game-item">
                     <h3>Snake</h3>
-                    <img src="snake-game-thumbnail.jpg" alt="Snake Game">
+                    <!-- <img src="snake-game-thumbnail.jpg" alt="Snake Game"> -->
                 </div>
                 <div class="game-item">
                     <h3>Memory Card Game</h3>
-                    <img src="memory-card-game-thumbnail.jpg" alt="Memory Card Game">
+                    <!-- <img src="memory-card-game-thumbnail.jpg" alt="Memory Card Game"> -->
                 </div>
             </section>
         </div>
@@ -292,6 +293,80 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+
+function animation () {
+    var canvas = document.querySelector('canvas');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    function drawCircle(context, x, y, radius, fillColor = '#242424', strokeColor = 'gray', lineWidth = 1) {
+        context.beginPath();               // Start a new path
+        context.arc(x, y, radius, 0, Math.PI * 2); // Create a circle with center (x, y) and given radius
+        context.fillStyle = fillColor;     // Set the fill color
+        context.fill();                    // Fill the circle
+        context.lineWidth = lineWidth;     // Set the line width for the stroke
+        context.strokeStyle = strokeColor; // Set the stroke color
+        context.stroke();                  // Draw the circle outline
+    }
+
+    function drawLine(start, end, color = '#ffffff', width=1) {
+        ctx.strokeStyle = color;
+        ctx.strokeStyle = 'lightsteelblue';
+        ctx.lineWidth = 1;
+        // Begin a new path
+        ctx.beginPath();
+        // Move to the starting point (x, y)
+        ctx.moveTo(start[0], start[1]);
+        // Draw a line to the end point (x, y)
+        ctx.lineTo(end[0], end[1]);
+        // Stroke the path to make the line visible
+        ctx.stroke();
+    }
+
+    const mobileScreen = window.innerWidth <= 728
+
+    // Check if the canvas is supported
+    if (canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        const startX = mobileScreen ? 30 : 60
+        const endX_start = mobileScreen ? 40 : 50
+        const endX = mobileScreen ? 25 : 30
+        const endY = mobileScreen ? 510 : 410
+        // \
+        // |
+        drawLine([0, 40], [startX, 80])
+        drawLine([startX, 80], [startX, window.innerHeight])
+        // \___
+        !mobileScreen && drawLine([40, 0], [150, 80], 'cyan')
+        !mobileScreen && drawLine([150, 80], [window.innerWidth * .3, 80], 'cyan')
+        !mobileScreen && drawCircle(ctx, window.innerWidth * .3, 80, 3); 
+
+        // ___/
+        !mobileScreen && drawLine([160, 50], [window.innerWidth * .3  , 50], 'orange')
+        !mobileScreen && drawCircle(ctx, 160, 50, 3); 
+        !mobileScreen && drawCircle(ctx, window.innerWidth * .3, 50, 3); 
+        // !mobileScreen && drawLine([window.innerWidth - 60, 50], [window.innerWidth, 0], 'orange')
+
+
+        //  line right side: / 
+        drawLine([window.innerWidth - endX_start, 180], [window.innerWidth, 60], 'pink')
+        // Y Line 1
+        drawLine([window.innerWidth - endX_start, 180], [window.innerWidth - endX_start, endY], 'red')
+        drawCircle(ctx, window.innerWidth - endX_start, 180, 3); 
+        drawCircle(ctx, window.innerWidth - endX_start, endY, 3); 
+        // !mobileScreen && false && drawLine([window.innerWidth - endX_start, endY], [window.innerWidth - endX, 200], 'green')
+        // Y Line 2
+        drawLine([window.innerWidth - endX, 200], [window.innerWidth - endX, window.innerHeight], 'yellow')
+        drawCircle(ctx, window.innerWidth - endX, 200, 3); 
+
+
+        // drawLine([60, 60], [60, window.innerHeight - 20])
+    } else {
+        console.log('Canvas is not supported by this browser.');
+    }
+}
+animation();
 
     </script>
 </body>
