@@ -6,7 +6,9 @@ body {
     padding: 10%;
     margin: 0;
     font-family: 'Roboto', sans-serif; /* Updated font-family */
-    background-color: #0F172C; /* Dark theme background */
+    /* Dark theme background */
+    /* background-color: #0F172C; */
+    background-color: #0C1223;
     /* Light text color for contrast */
     /* color: #94a3b8; */
     color: #e2e8f0; 

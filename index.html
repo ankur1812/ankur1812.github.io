@@ -372,8 +372,8 @@ function drawCircuit () {
         !mobileScreen && drawCircle(ctx, window.innerWidth * .3, 80, 3); 
         // \
         // |
-        drawLine([0, 40], [startX, 80], 'purple')
-        drawLine([startX, 80], [startX, window.innerHeight], 'darkgoldenrod')
+        mobileScreen && drawLine([0, 40], [startX, 80], 'purple')
+        mobileScreen && drawLine([startX, 80], [startX, window.innerHeight], 'darkgoldenrod')
 
         // ___/
         !mobileScreen && drawLine([160, 50], [window.innerWidth * .3  , 50], 'orange')
