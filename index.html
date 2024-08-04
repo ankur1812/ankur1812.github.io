@@ -102,7 +102,7 @@
                     <div class="skills">
                         <span class="chip">React.js</span>
                         <span class="chip">Dashboards</span>
-                        <span class="chip">Internationization (i18n)</span>
+                        <span class="chip">Internationalization (i18n)</span>
                         <span class="chip">Microfrontends</span>
                         <span class="chip">UI Library</span>
                         <span class="chip">Config driven UI</span>
@@ -469,6 +469,67 @@ function animate() {
 }
 
 animate();
+
+let chipsTooltipInfo = {
+    "Remix": "React-based framework for building modern web applications.",
+    "React": "JavaScript library for building user interfaces.",
+    "Vue.js": "Progressive JavaScript framework for building UIs.",
+    "Nuxt": "Framework for building server-rendered Vue.js applications.",
+    "Animations": "Animations design through HTML Canvas manipulation and CSS keyframes.",
+    "SASS": "CSS preprocessor for writing more maintainable stylesheets.",
+    "Tailwind CSS": "Utility-first CSS framework for rapid UI development.",
+    "Search Engine Optimization (SEO)": "Techniques to improve website visibility on search engines.",
+    "Core Web Vitals": "Metrics for measuring user experience on the web.",
+    "Content Management Systems (CMS)": "Systems to manage digital content creation and delivery.",
+    "Progressive Web Applications (PWAs)": "Web apps that offer a native app-like experience.",
+    "React.js": "JavaScript library for building user interfaces (same as React).",
+    "Dashboards": "Data visualization tools for monitoring and analyzing key metrics.",
+    "Internationalization (i18n)": "Process of designing software for global markets.",
+    "Microfrontends": "Architectural style for splitting frontend monoliths into smaller apps.",
+    "UI Library": "Collection of reusable UI components for development.",
+    "Config driven UI": "UIs that are generated or modified based on configuration.",
+    "Storybook": "Tool for developing and testing UI components in isolation.",
+    "Performance Improvement": "Techniques to enhance the speed and efficiency of applications.",
+    "Virtualization": "Techniques to optimize the rendering of large sets of data.",
+    "CLI Tools": "Command-line interface tools for development and automation.",
+    "Angular JS (1.x)": "Original version of Angular framework for building web apps.",
+    "Angular 5+": "Modern version of Angular framework for building web apps.",
+    "Microservices": "Architectural style where applications are composed of small, independent services.",
+    "Web Applications": "Applications accessed via web browsers.",
+    "Node.js": "JavaScript runtime for server-side programming.",
+    "State management (NgRx)": "State management library for Angular applications.",
+    "jQuery": "JavaScript library for simplifying HTML document traversal and manipulation.",
+    "Jasmine": "Testing framework for JavaScript.",
+    "Java": "Popular programming language used for building enterprise-level applications.",
+    "Spring MVC": "Framework for building web applications in Java.",
+    "MySQL": "Open-source relational database management system.",
+    "MySQL Server": "Software that manages MySQL databases.",
+    "Linux": "Open-source operating system kernel.",
+    "Microstrategy": "Business intelligence platform for data analysis and reporting.",
+    "Tokenization": "Process of converting sensitive data into secure tokens."
+}
+
+const dqs = (s) => document.querySelector(s);
+const dqsA = (s) => Array.from(document.querySelectorAll(s));
+const getTooltip = () => dqs('.tooltip')
+
+const removeTooltip = () => {
+  let lastTooltip = getTooltip();
+  if (lastTooltip) {
+    lastTooltip.parentElement.removeChild(lastTooltip)};
+}
+function showTooltip(e) {
+  removeTooltip();
+  let chipName = e.target.innerText;
+  let tooltipElem = document.createElement('div');
+    tooltipElem.classList.add('tooltip');
+    tooltipElem.innerHTML = `<span>${chipsTooltipInfo[chipName]}</span>`;
+    e.target.appendChild(tooltipElem);
+}
+
+
+dqsA('.chip').forEach(c => c.addEventListener('mouseenter', showTooltip));
+dqsA('.chip').forEach(c => c.addEventListener('mouseleave', removeTooltip));
 
     </script>
 </body>

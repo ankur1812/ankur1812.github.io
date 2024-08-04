@@ -150,17 +150,19 @@ h2 {
 /* Skills Chips */
 .chip {
     display: inline-block;
+    position: relative;
     padding: 5px 10px;
     margin: 5px;
     background-color: #21102e;
     cursor: pointer;
     color: inherit;
+    border: 1px solid #242424;
     border-radius: 16px;
     font-size: 14px;
 }
 .chip:hover {
-    color: white;
-    transition: color .5s;
+    border: 1px solid white;
+    transition: border 0.3s;
     box-shadow: #0F172C;
     /* transition-duration: 1s; */
 }
@@ -373,3 +375,23 @@ a:not(.hobby-item, .tab-link):hover {
   .underline {
     text-decoration: underline !important;
   }
+
+  .tooltip {
+    position: absolute;
+    left: 0px;
+    top: 40px;
+    z-index: 999999;
+    border: 1px solid white;
+
+    background: white;
+    color: #242424;
+    border: 1px solid #242424;
+
+    padding: 5px;
+    width: 100%;
+    min-width: 140px;
+    border-radius: 2px;
+    animation: tooltipAnimate .3s forwards;
+  }
+
+  @keyframes tooltipAnimate { from { opacity: 0; } to { opacity: 1; }}
