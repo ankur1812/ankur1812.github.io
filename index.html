@@ -29,7 +29,7 @@
             </div>
             <nav class="tabs-navigation">
                 <a href="#about" class="tab-link active">About </a>
-                <a href="#work-experience" class="tab-link">Experience</a>
+                <a href="#work-experience" class="tab-link">Career</a>
                 <a href="#hobby-projects" class="tab-link">Projects</a>
                 <!-- <a href="#my-games" class="tab-link">My Games</a> -->
             </nav>
@@ -218,12 +218,41 @@
                             <span class="arrow"> &rarr; </span>
                         </h3>
                     </div>
-                    <p>A webview based app designed for YouTube with improved UX. The app isn't live yet but here's the
-                        <a href="https://www.youtube.com/shorts/xI8KlCDrvu8" target="_blank">
+                    <p>A webview based app designed for YouTube with improved UX (with touch shortcuts & ad skipper). The app isn't live yet, here's the
+                        <a class="underline" href="https://www.youtube.com/shorts/xI8KlCDrvu8" target="_blank">
                             walkthrough demo
                             </a> of it
                     </p>
                 </div>
+
+                <div class="hobby-item">
+                    <div class="hobby-header">
+                        <img src="./assets/edulajar.png">
+                        <h3>
+                            EduLajar | Language Learning
+                            <span class="arrow"> &rarr; </span>
+                        </h3>
+                    </div>
+                    <p> An android game for helping children in rural Malaysia read/
+                        write in Malay. The game was built in the Unity game engine. The app is not available in NL, here's the
+                        <a class="underline" href="https://drive.google.com/file/d/1CioPH1OmN4IQbs-AeIIuc3rAQSqc-xID/view" target="_blank">
+                            walkthrough demo
+                            </a> of it
+                    </p>
+                </div>
+
+                <a class="hobby-item" href="https://advent-of-code-23.vercel.app/" target="_blank">
+                    <div class="hobby-header">
+                        <img src="./assets/adventofcode.png">
+                        <h3>
+                            Code Solver (Advent of Code Playground)
+                            <span class="arrow"> &rarr; </span>
+                        </h3>
+                    </div>
+                    <p>
+                        Code Solver is a HackerRank inspired project, focused on solving the daily challenges of  Advent of Code 2023, an annual coding competition.
+                    </p>
+                </a>
 
                 
                 <!-- 
@@ -399,23 +428,23 @@ function drawCircuit () {
             if (!mobileScreen)
             electricPath = ([
                 ...getLinePoints(40, 0, 150, 80),
-                ...getLinePoints(150, 80, Math.floor(window.innerWidth * .3), 80, 6, 100),
-                ...getLinePoints(Math.floor(window.innerWidth * .3), 50, 160, 50, 6, 100),
+                ...getLinePoints(150, 80, Math.floor(window.innerWidth * .3), 80, 6, 80),
+                ...getLinePoints(Math.floor(window.innerWidth * .3), 50, 160, 50, 6, 80),
                 // // ...getLinePoints(),
             ])
             else {
                 electricPath = [
                     ...electricPath, 
                     ...getLinePoints(0, 40, startX, 80),
-                    ...getLinePoints(startX, 80, startX, window.innerHeight, 8, 250),
+                    ...getLinePoints(startX, 80, startX, window.innerHeight, 8, 80),
                 ];
             }
             electricPath = [...electricPath, 
             // ...getLinePoints(0, 40, startX, 80),
             // ...getLinePoints(startX, 80, startX, window.innerHeight, 8, 250),
-            ...getLinePoints(window.innerWidth - endX, window.innerHeight, window.innerWidth - endX, 200, 6, 100),
+            ...getLinePoints(window.innerWidth - endX, window.innerHeight, window.innerWidth - endX, 200, 6, 80),
             ...getLinePoints(window.innerWidth, 60, window.innerWidth - endX_start, 180), // pink
-            ...getLinePoints(window.innerWidth - endX_start, 180, window.innerWidth - endX_start, endY, 6, 200), // red
+            ...getLinePoints(window.innerWidth - endX_start, 180, window.innerWidth - endX_start, endY, 6, 100), // red
             // ...getLinePoints(),
 
             ]

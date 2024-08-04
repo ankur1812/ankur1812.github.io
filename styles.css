@@ -369,3 +369,7 @@ a:not(.hobby-item, .tab-link):hover {
     pointer-events: none;
     z-index: 99999
   }
+
+  .underline {
+    text-decoration: underline !important;
+  }
