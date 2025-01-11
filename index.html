@@ -73,7 +73,7 @@
                             <span>Touchwonders <span class="date">March 2023 – Present</span></span>
                         </span>
                     </h3>
-                    <p>I’m currently a Front-End Developer at Touchwonders. The TW brand specializes in front-end product development, PWAs, and CMS integrated headless server architectures.</p>
+                    <p> My most recent role was as FrontEnd Developer at Touchwonders. The TW brand specialized in front-end product development, ECommerce, PWAs, and CMS integrated headless server architectures.</p>
                     <div class="skills">
                         <span class="chip">Remix</span>
                         <span class="chip">React</span>
@@ -195,9 +195,34 @@
                             <span class="arrow"> &rarr; </span>
                         </h3>
                     </div>
-                    <p>A VS Code inspired IDE plugin for GitHub.</p>
+                    <p>A VS Code inspired IDE theme plugin for GitHub.</p>
                 </a>
 
+                <a class="hobby-item" href="https://play.google.com/store/apps/details?id=io.ankur1812.nexttube" target="_blank">
+                    <div class="hobby-header">
+                        <img src="./assets/nexttube.png">
+                        <h3>
+                            NextTube
+                            <span class="arrow"> &rarr; </span>
+                        </h3>
+                    </div>
+                    <p>A YouTube app with improved UX, touch shortcuts ad skipper. Here's also a
+                        <span onclick="walkthroughDemo()" class="underline" href="https://www.youtube.com/shorts/xI8KlCDrvu8" target="_blank">
+                            walkthrough demo
+                        </span> of it.
+                    </p>
+                </a>
+
+                <a class="hobby-item" href="https://www.npmjs.com/package/chrome-extensions-cli" target="_blank">
+                    <div class="hobby-header">
+                        <img src="./assets/flutter.png">
+                        <h3>
+                            IP Relay
+                            <span class="arrow"> &rarr; </span>
+                        </h3>
+                    </div>
+                    <p>A tool to easily retrieve and share your device's IP address for mobile testing and peer programming.</p>
+                </a>
 
                 <a class="hobby-item" href="https://www.npmjs.com/package/chrome-extensions-cli" target="_blank">
                     <div class="hobby-header">
@@ -210,20 +235,6 @@
                     <p>A CLI tool for building chrome extensions.</p>
                 </a>
 
-                <div class="hobby-item">
-                    <div class="hobby-header">
-                        <img src="./assets/neo-player.png">
-                        <h3>
-                            Neo Player
-                            <span class="arrow"> &rarr; </span>
-                        </h3>
-                    </div>
-                    <p>A webview based app designed for YouTube with improved UX (with touch shortcuts & ad skipper). The app isn't live yet, here's the
-                        <a class="underline" href="https://www.youtube.com/shorts/xI8KlCDrvu8" target="_blank">
-                            walkthrough demo
-                            </a> of it
-                    </p>
-                </div>
 
                 <div class="hobby-item">
                     <div class="hobby-header">
@@ -354,6 +365,12 @@ function getLinePoints(x1, y1, x2, y2, speed = 6, wait = 0) {
     
     wait && (new Array(wait).fill(0)).forEach(a => points.push({ x: null, y: null }))
     return points;
+}
+
+function walkthroughDemo(e) {
+    window.open("https://www.youtube.com/shorts/xI8KlCDrvu8", "_blank")
+    e.preventDefault();
+    e.stopPropagation();
 }
 
 function drawCircuit () {
