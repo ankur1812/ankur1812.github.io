@@ -41,7 +41,7 @@ body {
 
 /* Fade-out Effect */
 .main-panel::before {
-    content: "";
+    /* content: "";
     position: fixed;
     height: 200px;
     width: 100%;
@@ -54,10 +54,11 @@ body {
         rgba(31, 31, 31, 0.25) 75%,
         rgba(31, 31, 31, 0) 100%
     );
-    pointer-events: none; /* Ensures it doesn't interfere with content interactions */
+    pointer-events: none;  */
+    /* None pointer events ensures it doesn't interfere with content interactions */
 }
 .main-panel::after {
-    content: "";
+    /* content: "";
     position: fixed;
     height: 150px;
     width: 100%;
@@ -70,7 +71,7 @@ body {
         rgba(31, 31, 31, 0.25) 75%,
         rgba(31, 31, 31, 0) 100%
     );
-    pointer-events: none; /* Ensures it doesn't interfere with content interactions */
+    pointer-events: none; */
 }
 /* Tabs Navigation */
 .tabs-navigation {
@@ -141,7 +142,7 @@ h2 {
 
 /* Experience Item */
 .experience-item {
-    padding-bottom: 2rem;
+    padding-bottom: 3.25rem;
     /* margin-bottom: 16px; */
     border-bottom: 1px solid #e2e8f0;
 
@@ -153,7 +154,7 @@ h2 {
     position: relative;
     padding: 5px 10px;
     margin: 5px;
-    background-color: #21102e;
+    background-color: #0f182e;
     cursor: pointer;
     color: inherit;
     border: 1px solid #242424;
@@ -167,8 +168,17 @@ h2 {
     /* transition-duration: 1s; */
 }
 
+#hobby-projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+#hobby-projects h2 {
+    width: 99%;
+}
 .hobby-item {
     display: flex;
+    width: 40%;
     flex-direction: column;
     gap: 6px;
     margin-bottom: 22px;
@@ -192,6 +202,7 @@ h2 {
 }
 .hobby-item p {
     margin: 0;
+    margin-top: 0.75rem;
 }
 
 .hobby-header {
@@ -211,6 +222,10 @@ html {
     scroll-behavior: smooth;
 }
 
+.section-header {
+    margin-top: 6rem;
+    margin-bottom: 5rem;
+}
 /* Scroll Detection */
 section {
     position: relative;
@@ -301,6 +316,11 @@ a:not(.hobby-item, .tab-link):hover {
     text-decoration: underline;
 }
 
+.profile-pic {
+    margin-left: 2rem;
+    border-radius: 1000px;
+}
+
 @media only screen and (max-width: 728px) {
     body { padding: 0 6%; }
     .sidebar {
@@ -324,10 +344,19 @@ a:not(.hobby-item, .tab-link):hover {
     .profile h1 {
         font-size: 1.25rem;
         margin: 4px 0;
+        display: inline;
     }
     .profile p {
         font-size: 0.75rem;
         margin: 0;
+        margin-left: 6px;
+    }
+
+    .profile-pic {
+        /* display: inline; */
+        width: 18px;
+        height: 18px;
+        margin-left: 0px;
     }
 
     .main-panel {
@@ -360,6 +389,10 @@ a:not(.hobby-item, .tab-link):hover {
         padding-top: 4.4rem;
         padding-bottom: 0px;
     }
+
+    .hobby-item {
+        width: 99%;
+    }
   }
 
   canvas {
@@ -384,10 +417,14 @@ a:not(.hobby-item, .tab-link):hover {
     border: 1px solid white;
 
     background: white;
-    color: #242424;
+    color: #1c284b;
     border: 1px solid #242424;
 
-    padding: 5px;
+    /* background: #1c284b;
+    color: white;
+    border: 1px solid white; */
+
+    padding: 8px;
     width: 100%;
     min-width: 140px;
     border-radius: 2px;

@@ -21,10 +21,10 @@
     <!-- <div class="container"> -->
         <div class="sidebar">
             <div class="profile">
-                <!-- <img src="./assets/me.png" class="m-l-6" height="120" alt="Profile Picture" style="aspect-ratio: 1; object-fit: cover;"> -->
+                <img src="./assets/me.jpeg" class="profile-pic" height="120" alt="Profile Picture" style="aspect-ratio: 1; object-fit: cover;">
                 <h1>Ankur Anmol</h1>
                 <!-- <p>I'm a SW Developer with interest in front-end technologies. -->
-                <p> JavaScript / Front End Developer
+                <p> Software Developer
                 </p>
             </div>
             <nav class="tabs-navigation">
@@ -54,7 +54,7 @@
                     <br/>
                     <br/>
                     
-                    In my free time, I have worked on a few personal projects, which included developing react native apps, chrome extensions and NPM packages, and some games built in C++ / JavaScript and Unity.
+                    In my free time, I have worked on a few personal projects, which included developing react native and flutter apps, chrome extensions and NPM packages, and some games built in C++ / JavaScript and Unity.
                     <!-- This blend of academic, professional, and personal experiences underscores [Your Name]'s commitment to advancing their skills and contributing to the tech community. -->
                     <br/>
                     <br/>
@@ -64,13 +64,33 @@
                 </p>
             </section>
             <section id="work-experience">
-                <!-- <h2>Professional Experience</h2> -->
+                <h2 class="section-header">Professional Experience</h2>
+                <div class="experience-item">
+                    <h3>
+                        Co-founder | Tech Lead (UI)
+                        <span class="company-details">
+                            <img src="./assets/hobbycaddy.jpeg" alt="touchwonders logo" title="Touchwonders logo" class="logo">
+                            <span>Hobby Caddy<span class="date">August 2024 – Present</span></span>
+                        </span>
+                    </h3>
+                    <p> I am one of the founding members of Hobby Caddy (now Fee Caddy), building platforms for students &
+                        hobby enthusiasts.</p>
+                    <div class="skills">
+                        <span class="chip">Single Page Applications (SPAs)</span>
+                        <span class="chip">React Native</span>
+                        <span class="chip">Firebase</span>
+                        <span class="chip">MongoDB</span>
+                        <span class="chip">Docker</span>
+                        <span class="chip">CI/CD</span>
+                        <span class="chip">AWS</span>
+                    </div>
+                </div>
                 <div class="experience-item">
                     <h3>
                         Front End Developer
                         <span class="company-details">
                             <img src="./assets/tw-logo.jpeg" alt="touchwonders logo" title="Touchwonders logo" class="logo">
-                            <span>Touchwonders <span class="date">March 2023 – Present</span></span>
+                            <span>Touchwonders <span class="date">March 2023 – August 2024</span></span>
                         </span>
                     </h3>
                     <p> My most recent role was as FrontEnd Developer at Touchwonders. The TW brand specialized in front-end product development, ECommerce, PWAs, and CMS integrated headless server architectures.</p>
@@ -146,9 +166,9 @@
                     </h3>
                     <p>Worked as a Microstrategy Admin, involved in updating data schemas and server maintenance. Part of support teams for Visa’s Tokenization (TPCAS), Verified by Visa (VbV), and Apple Pay.</p>
                     <div class="skills">
+                        <span class="chip">Linux</span>
                         <span class="chip">MySQL</span>
                         <span class="chip">MySQL Server</span>
-                        <span class="chip">Linux</span>
                         <span class="chip">Microstrategy</span>
                         <span class="chip">Tokenization</span>
                         <!-- <span class="chip">Smoke Testing</span> -->
@@ -156,7 +176,8 @@
                 </div>
             </section>
             <section id="hobby-projects">
-                <!-- <h2>Hobby Projects</h2> -->
+                <h2 class="section-header">Personal Projects</h2>
+                    <!-- <h2>Hobby Projects</h2> -->
                 <!-- <div class="project-item">
                     <h3>Google Chrome Extensions</h3>
                     <p>I’ve worked on developing chrome extensions for web security and productivity, built using the Chrome runtime APIs.
@@ -245,10 +266,10 @@
                         </h3>
                     </div>
                     <p> An android game for helping children in rural Malaysia read/
-                        write in Malay. The game was built in the Unity game engine. The app is not available in NL, here's the
+                        write in Malay. The game was built in the Unity game engine. The app is not available in NL, here's its
                         <a class="underline" href="https://drive.google.com/file/d/1CioPH1OmN4IQbs-AeIIuc3rAQSqc-xID/view" target="_blank">
                             walkthrough demo
-                            </a> of it
+                            </a>
                     </p>
                 </div>
 
@@ -488,6 +509,13 @@ function animate() {
 animate();
 
 let chipsTooltipInfo = {
+    "Single Page Applications (SPAs)": "Web apps that load a single HTML page and dynamically update content without refreshing.",
+    "React Native": "A framework for building mobile apps using React and JavaScript.",
+    "Firebase": "A backend-as-a-service providing authentication, databases, and hosting for apps.",
+    "MongoDB": "A NoSQL document database for scalable and flexible data storage.",
+    "Docker": "A platform for developing, shipping, and running applications in containers.",
+    "CI/CD": "A development practice automating code integration, testing, and deployment.",
+    "AWS": "A cloud computing platform offering scalable computing, storage, and services.",
     "Remix": "React-based framework for building modern web applications.",
     "React": "JavaScript library for building user interfaces.",
     "Vue.js": "Progressive JavaScript framework for building UIs.",
