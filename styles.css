@@ -14,6 +14,8 @@ body {
     color: #e2e8f0; 
     scroll-behavior: smooth; /* Smooth scrolling */
     cursor: default;
+    /* animation: glowBorder 3s infinite alternate; */
+
 }
 
 /* Sidebar */
@@ -323,6 +325,9 @@ a:not(.hobby-item, .tab-link):hover {
 
 @media only screen and (max-width: 728px) {
     body { padding: 0 6%; }
+    .glow {
+        background: radial-gradient(circle, rgba(0, 140, 255, 0.3) 30%, transparent 50%) !important;
+    }
     .sidebar {
         position: relative;
         height: auto;
@@ -390,6 +395,10 @@ a:not(.hobby-item, .tab-link):hover {
         padding-bottom: 0px;
     }
 
+    #hobby-projects {
+        gap: 0.5rem;
+    }
+
     .hobby-item {
         width: 99%;
     }
@@ -432,3 +441,52 @@ a:not(.hobby-item, .tab-link):hover {
   }
 
   @keyframes tooltipAnimate { from { opacity: 0; } to { opacity: 1; }}
+
+
+  /* @keyframes glowBorder {
+    0% {
+        box-shadow: inset 0 0 20px rgba(0, 140, 255, 0.3), 
+                    0 0 40px rgba(0, 140, 255, 0.6);
+    }
+    100% {
+        box-shadow: inset 0 0 40px rgba(0, 140, 255, 0.6), 
+                    0 0 80px rgba(0, 140, 255, 1);
+    }
+} */
+
+.glow {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 99999;
+    background: radial-gradient(circle, rgba(0, 140, 255, 0.3) 12%, transparent 50%);
+    /* animation: wavyGlow 4s infinite alternate ease-in-out; */
+    filter: blur(180px);
+    box-shadow: 0 0 40px rgba(0, 140, 255, 0.6), 
+                0 0 100px rgba(0, 140, 255, 0.8), 
+                inset 0 0 50px rgba(0, 140, 255, 0.5);
+}
+
+/* @keyframes wavyGlow {
+    0% {
+        box-shadow: 0 0 20px rgba(0, 140, 255, 0.3), 
+                    0 0 60px rgba(0, 140, 255, 0.5), 
+                    inset 0 0 30px rgba(0, 140, 255, 0.3);
+        transform: scale(1.02) rotate(0deg);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(0, 140, 255, 0.6), 
+                    0 0 100px rgba(0, 140, 255, 0.8), 
+                    inset 0 0 50px rgba(0, 140, 255, 0.5);
+        transform: scale(1.03) rotate(1deg);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(0, 140, 255, 0.3), 
+                    0 0 60px rgba(0, 140, 255, 0.5), 
+                    inset 0 0 30px rgba(0, 140, 255, 0.3);
+        transform: scale(1.02) rotate(-1deg);
+    }
+} */
